@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-kapt'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
     id 'com.apollographql.apollo3' version("3.7.3")
 }
 
@@ -49,6 +51,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation("com.apollographql.apollo3:apollo-runtime:3.7.3")
+
+    // Dagger Hilt dependencies
+    implementation 'com.google.dagger:hilt-android:2.42'
+    annotationProcessor 'com.google.dagger:hilt-compiler:2.42'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
